@@ -14,6 +14,8 @@ Simple Adobe XD Plugin for insert icons in our Artwork.
 
 Download the [instalation package](https://github.com/matheusAle/iconns-xd-plugin/blob/master/iconns.xdx) and make a double click over.
 
+*or, for developers:*
+
 Download repository content and extract in develop folder of your Adobe DX instalation. You cam easely find the in: `Adobe DX > Options > Plugins > Development > Show Develp Folder`.
 
 # Screens
