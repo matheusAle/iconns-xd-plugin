@@ -1,0 +1,24 @@
+{
+   "name": "Iconns",
+   "id": "92859f1a",
+   "version": "1.0.0-prebeta-0",
+   "description": "Sample plugin for search and insert icons in your work.",
+   "icons": [
+      {
+         "width": 96,
+         "height": 96,
+         "path": "images/icon.png"
+      }
+   ],
+   "host": {
+      "app": "XD",
+      "minVersion": "13.0.0"
+   },
+   "uiEntryPoints": [
+      {
+         "type": "menu",
+         "label": "Iconns",
+         "commandId": "renderInterface"
+      }
+   ]
+}
