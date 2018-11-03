@@ -1,5 +1,5 @@
 const { parser } = require("./svg");
-const { createDialog } = require("./lib/dialogs.js");
+const { createDialog, error } = require("./lib/dialogs.js");
 const { group } = require("commands");
 
 async function renderInterface(selection) {
@@ -110,7 +110,7 @@ function template(selection) {
         inputQueryEl.disabled = true;
         let query = inputQueryEl.value;
 
-        fetch('http://127.0.0.1:3000/search?q=' + query)
+        fetch('https://iconns-ws.herokuapp.com/search?q=' + query)
             .then(async response => {
                 searchLoadEl.classList.toggle('show');
                 inputQueryEl.disabled = false;
@@ -146,7 +146,7 @@ function template(selection) {
 
         el.querySelector('.load-wapper').classList.toggle('show');
 
-        fetch(`http://127.0.0.1:3000${url}`)
+        fetch(`https://iconns-ws.herokuapp.com${url}`)
             .then(async (result) => {
                 let content = await result.text();
                 let paths = await parser(content);
@@ -155,7 +155,9 @@ function template(selection) {
                 group();
                 el.querySelector('.load-wapper').classList.toggle('show');
             })
-            .catch(err => console.log(err));
+            .catch(async err => {
+                await error('Iconns error', 'Error in download thin icons, please choose another.')
+            });
     }
 
     /**
