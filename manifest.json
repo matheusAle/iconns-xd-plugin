@@ -1,8 +1,12 @@
 {
+   "id": "363e2ac1",
    "name": "Iconns",
-   "id": "92859f1a",
-   "version": "1.0.0-prebeta-0",
+   "version": "1.0.0",
    "description": "Sample plugin for search and insert icons in your work.",
+   "summary": "Sample plugin for search and insert icons in your work.",
+   "languages": ["en"],
+   "author": "Matheus Ale",
+   "helpUrl": "m.matheus.ale@gmail.com",
    "icons": [
       {
          "width": 96,

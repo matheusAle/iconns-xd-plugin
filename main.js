@@ -102,7 +102,11 @@ function template(selection) {
     const resultsContainerEl = template.querySelector('#results');
     
     template.addEventListener('keydown', (e) => { 
-        if (e.key == 'Enter') { onSearch() }
+        if (e.key == 'Enter') { 
+            e.stopPropagation();
+            e.preventDefault();
+            onSearch();
+         }
      })
 
     function onSearch() {
